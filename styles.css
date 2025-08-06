@@ -1,0 +1,196 @@
+/* Reset padding, margin, box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ----- Navigation Bar ----- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 6px rgba(60,60,80,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+    z-index: 10;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    margin-right: 12px;
+    box-shadow: 0 2px 8px rgba(85, 191, 112, 0.3);
+}
+
+.nav-title {
+    font-size: 1.7em;
+    color: #43a047;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475841;
+    font-size: 1.08em;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #9dc44d;
+    border-bottom: 2.5px solid #9dc44d;
+}
+
+/* ----- Landing Section with Background Image ----- */
+.landing-section {
+    min-height: 100vh;
+    background: url('images/background3.jpeg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* account nav-bar height */
+}
+
+.welcome-text {
+    background: rgba(255,255,255,0.80);
+    padding: 36px 48px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(64,60,62,0.12);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-text h1 {
+    font-size: 2.6em;
+    color: #388e3c;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+}
+
+.welcome-text p {
+    color: #666f4d;
+    font-size: 1.18em;
+}
+
+/* ----- Login Form ----- */
+.login-form {
+    background: linear-gradient(120deg, #f2ffe0 60%, #f3e0ff 100%);
+    padding: 32px 36px 28px 36px;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px 0 rgba(85,191,112,0.18);
+    width: 350px;
+    position: relative;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #75216e;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 510;
+    margin-bottom: 6px;
+    color: #43a047;
+}
+
+.input-group input {
+    padding: 11px 14px;
+    border: 2px solid #dfe6df;
+    border-radius: 12px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.23s, box-shadow 0.2s;
+    background: #fff;
+    box-shadow: 0 1.5px 6px rgba(173, 225, 166, 0.07);
+}
+
+.input-group input:focus {
+    border-color: #8ec24a;
+    box-shadow: 0 0 0 3px rgba(162, 219, 143, 0.16);
+}
+
+.login-form button {
+    margin-top: 18px;
+    padding: 12px;
+    background: linear-gradient(90deg, #a3f570 0%, #43a047 100%);
+    color: #fff;
+    font-size: 1.08em;
+    font-weight: bold;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 0 2px 8px rgba(85,191,112,0.15);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.login-form button:hover,
+.login-form button:focus {
+    background: linear-gradient(90deg, #8ec24a 0%, #557a30 100%);
+    transform: translateY(-2px) scale(1.025);
+    box-shadow: 0 4px 16px rgba(123, 160, 92, 0.19);
+}
+
+/* --- Responsive Design for Mobile/Tablet --- */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 8px;
+        height: 60px;
+    }
+    .nav-title {
+        font-size: 1.08em;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .landing-section {
+        padding-top: 70px;
+    }
+    .welcome-text, .login-form {
+        padding: 20px 10px;
+        width: 90vw;
+        min-width: 0;
+        border-radius: 10px;
+    }
+}
